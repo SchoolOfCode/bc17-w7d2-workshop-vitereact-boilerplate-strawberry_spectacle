@@ -1,42 +1,389 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family: "Aleo", serif;
+}
+
+.header-container {
+  padding-left: 10px;
+  font-size: 16px;
+  width: 70%;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.hero-headline {
+  margin: 0;
+  padding: 0;
+}
+.hero-description {
+  background-color: #f1911b;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+}
+.consultation-paragraph {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+.number-span {
+  color: #fff2e4;
+}
+.how-it-works-section {
+  width: 100%;
   text-align: center;
+  padding: 0;
+  font-weight: lighter;
+}
+.tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.tile-image {
+  height: 200px;
+  width: 250px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.footer {
+  padding: 10px;
+  height: 250px;
+  background-color: #f0f1f1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+.footer-colunm {
+  display: flex;
+  flex-direction: column;
+}
+.footer-nav {
+  display: block;
+  padding: 0;
+  list-style-type: none;
+}
+.socials-link {
+  text-decoration: none;
+  color: #000;
+}
+.email-link {
+  color: #000;
+}
+.colunms-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.separator {
+  width: 80%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
+  .header-container {
+    width: 70%;
+  }
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .hero-image {
+    height: 500px;
+    width: 550px;
+  }
+  .hero-description {
+    height: 150px;
+    width: 300px;
+    padding: 20px;
+  }
+  .consultation-paragraph {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .how-it-works-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tiles {
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+  }
+  .tile {
+    width: 30%;
+  }
+  .footer {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .colunms-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .separator {
+    width: 70%;
+    height: 2px;
+    background-color: lightgray;
+    border: none;
+    margin-top: 40px;
+  }
+} */
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px; /* Base font size */
+  padding: 0;
+  margin: 0;
+  font-family: "Aleo", serif;
 }
 
-.card {
-  padding: 2em;
+.header-container {
+  padding-left: 0.625rem; /* 10px / 16 */
+  font-size: 1rem; /* 16px / 16 */
+  width: 70%;
 }
 
-.read-the-docs {
-  color: #888;
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem; /* 10px / 16 */
+}
+
+.hero-image {
+  width: 100%;
+  height: 18.75rem; /* 300px / 16 */
+  object-fit: cover;
+}
+
+.hero-headline {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-description {
+  background-color: #f1911b;
+  font-size: 2rem; /* 32px / 16 */
+  font-weight: bold;
+  padding: 0.625rem; /* 10px / 16 */
+}
+
+.consultation-paragraph {
+  font-size: 1.5rem; /* 24px / 16 */
+  margin: 0;
+  padding: 0;
+}
+
+.number-span {
+  color: #fff2e4;
+}
+
+.how-it-works-section {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  font-weight: lighter;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem; /* 10px / 16 */
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.625rem; /* 10px / 16 */
+}
+
+.tile-image {
+  height: 12.5rem; /* 200px / 16 */
+  width: 15.625rem; /* 250px / 16 */
+}
+
+.footer {
+  padding: 0.625rem; /* 10px / 16 */
+  height: 15.625rem; /* 250px / 16 */
+  background-color: #f0f1f1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.375rem; /* 22px / 16 */
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav {
+  display: block;
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.email-link {
+  color: #000;
+}
+
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.separator {
+  width: 80%;
+}
+
+@media (min-width: 64rem) { /* 1024px / 16 = 64rem */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-container {
+    width: 70%;
+  }
+
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .hero-image {
+    height: 31.25rem; /* 500px / 16 */
+    width: 34.375rem; /* 550px / 16 */
+  }
+
+  .hero-description {
+    height: 9.375rem; /* 150px / 16 */
+    width: 18.75rem; /* 300px / 16 */
+    padding: 1.25rem; /* 20px / 16 */
+  }
+
+  .consultation-paragraph {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.625rem; /* 10px / 16 */
+  }
+
+  .how-it-works-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tiles {
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .tile {
+    width: 30%;
+  }
+
+  .footer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 0.625rem; /* 10px / 16 */
+    width: 12.5rem; /* 200px / 16 */
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .columns-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .separator {
+    width: 70%;
+    height: 0.125rem; /* 2px / 16 */
+    background-color: lightgray;
+    border: none;
+    margin-top: 2.5rem; /* 40px / 16 */
+  }
 }
