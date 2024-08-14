@@ -1,0 +1,36 @@
+
+.IntroFounders {
+    background-color: #f29631;
+    padding: 50px;
+    text-align: center;
+    color: black;
+}
+.IntroFoundersH2 {
+    font-size: 36px;
+    margin: 0;
+}
+.IntroFoundersP {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: white;
+}
+.contentDiv {
+    width: 30%;
+}
+.contentFoundersH3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.contentFoundersP {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.contentImg {
+    width: 100%;
+    margin-top: 20px;
+}
