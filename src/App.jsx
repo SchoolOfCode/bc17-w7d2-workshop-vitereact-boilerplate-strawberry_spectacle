@@ -2,14 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Title from './components/Title/Title'
+
+// Don't use Header as filename, changed to Title as fix.
 
 function App() {
   return (
       <>
           <div className="wrapper">
-            <header className="header-container">
-              <h1>🔥 Fireplace Palace</h1>
-            </header>
+            
+            <Title title="🔥 Fireplace Palace"/> {/*I can pass anyhting through this, e.g I can input ANY object e.g button  */}
+
             <main>
               <section className="hero-section">
                 <img
