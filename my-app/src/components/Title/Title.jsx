@@ -16,10 +16,11 @@ function handleClick() {
 
 return (
   <header>
-    <button onClick={handleClick}>
-      <img src="menu-open-button.png" alt="Burger toggle menu" />
-    </button>
     <h1 className={styles.titleContainer}> ╰(*°▽°*)╯Fireplace 🔥👩‍🚒👩‍🚒</h1>
+    <button onClick={handleClick}>
+      <img className={styles.burgerButton} src="menu-open-button.png" alt="Burger toggle menu" />
+    </button>
+
 
     {menuStatus && (
       // <div className={menuStatus ? styles.menuOpen : styles.menuClosed}>

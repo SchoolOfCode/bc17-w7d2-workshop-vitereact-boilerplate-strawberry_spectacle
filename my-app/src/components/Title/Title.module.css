@@ -1,24 +1,28 @@
 
-
 .titleContainer {
-    padding-left: 0.625rem; 
-    font-size: 2rem; 
-    width: 70%;
-    
-  } 
-  
+  padding-left: 0.625rem; 
+  font-size: 2rem; 
+  width: 70%;
+  display: inline-block;
+} 
 
+.burgerButton {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  width: 3rem;
+  height: auto;
+}
 
-  .menuOpen {
-    background-color: orange;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+.menuOpen {
+  background-color: orange;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
 
-  }
-
-  .menuClosed {
-    background-color: initial;
-    
-  }
+.menuClosed {
+  background-color: initial;
+}
 

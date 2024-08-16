@@ -1,10 +1,11 @@
 
 import { useState, useEffect } from 'react';
+import styles from './Reviews.module.css';
 
 export default function Reviews() {
     
     const [ selectedCountry, setSelectedCountry ] = useState(null);
-    const [ countryData, setCountryData ] = useState(null);
+    const [ countryData, setCountryData ] = useState({});
 
     useEffect(() => {
         
@@ -26,12 +27,27 @@ export default function Reviews() {
     
     return (
         <>
-            <h2>Reviews</h2>
-            <button onClick={() => selectCountry("scotland")}>Scotland</button>
-            <button onClick={() => selectCountry("england")}>England</button>
-            <button onClick={() => selectCountry("wales")}>Wales</button>
-        
-            { JSON.stringify(countryData) };
+            <h2 className={styles.reviewHeading}>Trusted.</h2>
+            <p className={styles.trustedText}>We've got thousands of happy customers all over the UK. Choose your country to see the latest review:</p>
+            
+            <button className={`${styles.countryButton} ${selectedCountry === "scotland" ? styles.activeButton : ""}`}
+                onClick={() => selectCountry("scotland")}>Scotland
+            </button>
+            
+            <button className={`${styles.countryButton} ${selectedCountry === "england" ? styles.activeButton : ""}`}
+                onClick={() => selectCountry("england")}>England
+            </button>
+
+            <button className={`${styles.countryButton} ${selectedCountry === "wales" ? styles.activeButton : ""}`}
+                onClick={() => selectCountry("wales")}>Wales
+            </button>
+
+            {countryData.text && (
+                <div className={styles.reviewContainer}>
+                    <p className={styles.reviewText}>{countryData.text}</p>
+                    <p className={styles.reviewAuthorLocation}>- {countryData.author}, {countryData.location}</p>
+                </div> 
+            )}           
         </>
     )
 }
