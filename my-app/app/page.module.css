@@ -33,4 +33,8 @@
 .contentImg {
     width: 100%;
     margin-top: 20px;
+    height: 18.75rem; /* 300px / 16 */
+    object-fit: cover;
 }
+
+
