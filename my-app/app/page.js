@@ -13,7 +13,7 @@ export default function Home() {
   return (
 
    <main>
-   <Link href="/founders" onClick={handleClick} >Founders Button</Link>
+
    <Hero />
    </main>
   );

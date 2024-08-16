@@ -8,4 +8,17 @@
   } 
   
 
-  
+
+  .menuOpen {
+    background-color: orange;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+  .menuClosed {
+    background-color: initial;
+    
+  }
+
