@@ -1,8 +1,8 @@
-import styles from  ".styles/module.css";
+import styles from  "./header.module.css";
 
 export default function Header () {
     return (        
-        <header className="header-container">
+        <header className={styles.headerContainer}>
               <h1>🔥 Fireplace Palace</h1>
             </header>
     );

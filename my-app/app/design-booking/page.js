@@ -1,8 +1,14 @@
-import { use } from "react";
+"use client"
+import { useState } from "react";
 
 export default function ContactForm() {
 
-const [nameInput,setNameInput] = useState()
+const [nameInput,setNameInput] = useState("")
+
+function handleInputChangeName (event){
+
+  console.log(event.target.value)
+}
 
   return (
     <>
@@ -13,7 +19,7 @@ const [nameInput,setNameInput] = useState()
 
           <div className="form-group">
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" onChange=handleInputChangeName required /> 
+            <input type="text" id="full-name" name="full-name" onChange={(event) => handleInputChangeName (event)} required /> 
           </div>
 
           <div className="form-group">

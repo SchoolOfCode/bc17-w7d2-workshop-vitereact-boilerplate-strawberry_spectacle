@@ -1,0 +1,103 @@
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem; /* 10px / 16 */
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: 18.75rem; /* 300px / 16 */
+    object-fit: cover;
+  }
+  
+  .heroHeadline {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .heroDescription {
+    background-color: #f1911b;
+    font-size: 2rem; /* 32px / 16 */
+    font-weight: bold;
+    padding: 0.625rem; /* 10px / 16 */
+  }
+  
+  .consultationParagraph {
+    font-size: 1.5rem; /* 24px / 16 */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .numberSpan {
+    color: #fff2e4;
+  }
+  
+  .howItWorksSection {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-weight: lighter;
+  }
+  
+  .tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.625rem; /* 10px / 16 */
+  }
+  
+  .tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.625rem; /* 10px / 16 */
+  }
+  
+  .tileImage {
+    height: 12.5rem; /* 200px / 16 */
+    width: 15.625rem; /* 250px / 16 */
+  }
+
+
+  @media (min-width: 64rem) { /* 1024px / 16 = 64rem */
+    .heroSection {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+      }
+    
+      .heroImage {
+        height: 31.25rem; /* 500px / 16 */
+        width: 34.375rem; /* 550px / 16 */
+      }
+    
+      .heroDescription {
+        height: 9.375rem; /* 150px / 16 */
+        width: 18.75rem; /* 300px / 16 */
+        padding: 1.25rem; /* 20px / 16 */
+      }
+    
+      .consultationParagraph {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.625rem; /* 10px / 16 */
+      }
+    
+      .howItWorksSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .tiles {
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-between;
+      }
+    
+      .tile {
+        width: 30%;
+      }
+    }
