@@ -1,6 +1,9 @@
 "use client"
 import { useState } from "react";
 
+import styles from "./page.module.css";
+
+
 export default function ContactForm() {
 
   const [fullName,setFullName] = useState("")
@@ -52,53 +55,67 @@ export default function ContactForm() {
 
   return (
     <>
+      <h2 className={styles.designTitle}>Design Booking</h2>
+      
+          <div>
+          <legend className={styles.legend}>Personal Information</legend>
+          </div>
 
       <form onSubmit={(event) => handleSubmit(event)}>
-        <fieldset>
-          <legend>Personal Information</legend>
 
-          <div className="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" value={fullName} onChange={(event) => handleChange (event)} /> 
+        <fieldset className={styles.fieldsetContainer}>
+          
+          <div className={styles.formGroup}>
+            <div><label for="fullName">Full Name</label></div>
+            <div><input type="text" id="fullName" name="fullName" value={fullName} onChange={(event) => handleChange (event)} /> </div>
           </div>
 
-          <div className="form-group">
-            <label for="postcode">Postcode</label>
-            <input type="text" id="postcode" name="postcode" value={postcode} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="postcode">Postcode</label></div>
+            <div><input type="text" id="postcode" name="postcode" value={postcode} onChange={(event) => handleChange (event)} /></div>
           </div>
 
-          <div className="form-group">
-            <label for="address">House/Flat Number and Street Name</label>
-            <input type="text" id="address" name="address" value={address} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="address">House/Flat Number and Street Name</label></div>
+            <div><input type="text" id="address" name="address" value={address} onChange={(event) => handleChange (event)} /></div>
           </div>
 
-          <div className="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" value={city} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="city">City</label></div>
+            <div><input type="text" id="city" name="city" value={city} onChange={(event) => handleChange (event)} /></div>
           </div>
         </fieldset>
-        <fieldset>
-          <legend>Contact Information</legend>
 
-          <div className="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" value={phone} onChange={(event) => handleChange (event)} />
+          <div>
+          <legend className={styles.legend}>Contact Information</legend>
           </div>
 
-          <div className="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" value={email} onChange={(event) => handleChange (event)}  />
+        <fieldset className={styles.fieldsetContainer}>
+
+          <div className={styles.formGroup}>
+            <div><label for="phone">Phone Number</label></div>
+            <div><input type="tel" id="phone" name="phone" value={phone} onChange={(event) => handleChange (event)} /></div>
           </div>
 
-          <p className="error-message">
+          <div className={styles.formGroup}>
+            <div><label for="email">Email Address</label></div>
+            <div><input type="email" id="email" name="email" value={email} onChange={(event) => handleChange (event)}  /></div>
+          </div>
+
+        </fieldset>
+
+          <p className={styles.errorMessage}>
             Error: all fields are required - some missing.
           </p>
 
-          <button type="submit" className="submit-btn">
+        <button className={styles.submitButton} type="submit">
             Request Design Consultation
-          </button>
-        </fieldset>
+        </button>
+
       </form>
+      <div>
+
+      </div>
     </>
   );
 }

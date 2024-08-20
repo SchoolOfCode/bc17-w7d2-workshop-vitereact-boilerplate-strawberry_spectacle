@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Hero from "@/src/components/Hero/Hero";
+import Hero2 from "@/src/components/Hero2/Hero2";
 import Link from "next/link";
 import Reviews from "@/src/components/Reviews/Reviews";
 
@@ -14,8 +15,11 @@ export default function Home() {
   return (
 
    <main>
+    <Hero />
+
    <Reviews />
-   <Hero />
+   
+   <Hero2 />
   
    </main>
   );

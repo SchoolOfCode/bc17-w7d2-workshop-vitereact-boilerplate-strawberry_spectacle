@@ -1,25 +1,43 @@
 
+
 .titleContainer {
   padding-left: 0.625rem; 
   font-size: 2rem; 
-  width: 70%;
+  width: 80%;
   display: inline-block;
-} 
+}  
 
 .burgerButton {
-  display: inline-block;
+  display: flex-start;
+  position: sticky;
   padding: 0;
   border: none;
   background: none;
   width: 3rem;
   height: auto;
+} 
+
+
+.contentMenu {
+  text-decoration: none;
+  color: #000;
+  align-items: center;
+  justify-content: center;  
+  display: flex;
 }
 
 .menuOpen {
   background-color: orange;
-  position: fixed;
+  /* position: fixed; */
   width: 100vw;
   height: 100vh;
+  
+}
+
+.linkMenu{
+  text-decoration: none;
+  color: #000;
+  
 }
 
 .menuClosed {

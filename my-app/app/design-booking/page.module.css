@@ -1,0 +1,47 @@
+
+
+.designTitle {
+    background-color: #f29631;
+    padding: 15px;
+    text-align: left;
+    color: black;
+    font-size: 1.6rem;
+}
+
+
+.fieldsetContainer {
+    background-color: #e1dfde;
+    padding: 15px;
+    text-align: left;
+    color: black;
+    font-size: 1rem;
+    border: none;
+}
+
+.legend{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.formGroup {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.errorMessage{
+    color: rgb(230, 15, 15);
+}
+
+.submitButton{
+    background-color: #f29631;
+    padding: 15px;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    justify-self: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 3rem;
+}
