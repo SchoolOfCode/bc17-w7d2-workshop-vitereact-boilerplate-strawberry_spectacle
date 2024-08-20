@@ -3,38 +3,78 @@ import { useState } from "react";
 
 export default function ContactForm() {
 
-const [nameInput,setNameInput] = useState("")
+  const [fullName,setFullName] = useState("")
+  const [postcode, setPostcode] = useState("")
+  const [address, setAddress] = useState("")
+  const [city, setCity] = useState("")
+  const [phone, setPhone] = useState("")
+  const [email, setEmail] = useState("")
+  
+  function handleChange (event){
 
-function handleInputChangeName (event){
+    if (event.target.name === "fullName") {
+      setFullName(event.target.value);
+    }
 
-  console.log(event.target.value)
-}
+    if (event.target.name === "postcode") {
+      setPostcode(event.target.value);
+    }
+
+    if (event.target.name === "address") {
+      setAddress(event.target.value);
+    }  
+
+    if (event.target.name === "city") {
+      setCity(event.target.value);
+    }
+
+    if (event.target.name === "phone") {
+      setPhone(event.target.value);
+    }
+
+    if (event.target.name === "email") {
+      setEmail(event.target.value);
+    }
+
+    console.log(event.target.value)
+    console.log(event.target.name)
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault()
+  }
+
+// when someone submits form
+// we want to handle submission
+  //stop form submitting
+    //
+
 
   return (
     <>
 
-      <form>
+      <form onSubmit={(event) => handleSubmit(event)}>
         <fieldset>
           <legend>Personal Information</legend>
 
           <div className="form-group">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" onChange={(event) => handleInputChangeName (event)} required /> 
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" value={fullName} onChange={(event) => handleChange (event)} /> 
           </div>
 
           <div className="form-group">
             <label for="postcode">Postcode</label>
-            <input type="text" id="postcode" name="postcode" required />
+            <input type="text" id="postcode" name="postcode" value={postcode} onChange={(event) => handleChange (event)} />
           </div>
 
           <div className="form-group">
             <label for="address">House/Flat Number and Street Name</label>
-            <input type="text" id="address" name="address" required />
+            <input type="text" id="address" name="address" value={address} onChange={(event) => handleChange (event)} />
           </div>
 
           <div className="form-group">
             <label for="city">City</label>
-            <input type="text" id="city" name="city" required />
+            <input type="text" id="city" name="city" value={city} onChange={(event) => handleChange (event)} />
           </div>
         </fieldset>
         <fieldset>
@@ -42,12 +82,12 @@ function handleInputChangeName (event){
 
           <div className="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input type="tel" id="phone" name="phone" value={phone} onChange={(event) => handleChange (event)} />
           </div>
 
           <div className="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" value={email} onChange={(event) => handleChange (event)}  />
           </div>
 
           <p className="error-message">
