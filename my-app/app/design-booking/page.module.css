@@ -29,6 +29,12 @@
     font-size: 1rem;
 }
 
+
+.field {
+    width: 100%;
+}
+
+
 .errorMessage{
     color: rgb(230, 15, 15);
 }

@@ -139,22 +139,22 @@ export default function ContactForm() {
           
           <div className={styles.formGroup}>
             <div><label for="fullName">Full Name</label></div>
-            <div><input type="text" id="fullName" name="fullName" value={state.data.fullName} onChange={(event) => handleChange (event)} /> </div>
+            <div className={styles.field}>< input type="text" id="fullName" name="fullName" value={state.data.fullName} onChange={(event) => handleChange (event)} /> </div>
           </div>
 
-          <div className="form-group">
-            <label for="postcode">Postcode</label>
-            <input type="text" id="postcode" name="postcode" value={state.data.postcode} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="postcode">Postcode</label></div>
+            <div><input type="text" id="postcode" name="postcode" value={state.data.postcode} onChange={(event) => handleChange (event)} /> </div>
           </div>
 
-          <div className="form-group">
-            <label for="address">House/Flat Number and Street Name</label>
-            <input type="text" id="address" name="address" value={state.data.address} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="address">House/Flat Number and Street Name</label></div>
+            <div><input type="text" id="address" name="address" value={state.data.address} onChange={(event) => handleChange (event)} /></div>
           </div>
 
-          <div className="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" value={state.data.city} onChange={(event) => handleChange (event)} />
+          <div className={styles.formGroup}>
+            <div><label for="city">City</label></div>
+            <div><input type="text" id="city" name="city" value={state.data.city} onChange={(event) => handleChange (event)} /></div>
           </div>
 
         </fieldset>
@@ -165,14 +165,14 @@ export default function ContactForm() {
 
         <fieldset className={styles.fieldsetContainer}>
 
-        <div className="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" value={state.data.phone} onChange={(event) => handleChange (event)} />
+        <div className={styles.formGroup}>
+            <div><label for="phone">Phone Number</label></div>
+            <div><input type="tel" id="phone" name="phone" value={state.data.phone} onChange={(event) => handleChange (event)} /></div>
           </div>
 
-          <div className="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" value={state.data.email} onChange={(event) => handleChange (event)}  />
+          <div className={styles.formGroup}>
+            <div><label for="email">Email Address</label></div>
+            <div><input type="email" id="email" name="email" value={state.data.email} onChange={(event) => handleChange (event)}  /></div>
           </div>
         
         </fieldset>
