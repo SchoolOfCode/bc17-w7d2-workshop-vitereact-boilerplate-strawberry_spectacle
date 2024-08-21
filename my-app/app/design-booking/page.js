@@ -12,6 +12,8 @@ export default function ContactForm() {
   const [city, setCity] = useState("")
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
+
+  const [ error, setError ] = useState(false);
   
   function handleChange (event){
 
@@ -46,16 +48,16 @@ export default function ContactForm() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    if (!fullName || !postcode || !street || !city || !phoneNumber || !email)  {
+    if (!fullName || !postcode || !address || !city || !phone || !email)  {
       setError(true);
       return;
-  }
+    }
 
-  if (error) {
-      setError(false);
-  }
+    if (error) {
+        setError(false);
+    }
 
-  console.log("Data!!!!!!");
+    console.log("Data!!!!!!");
   }
 
 // when someone submits form
@@ -115,9 +117,7 @@ export default function ContactForm() {
 
         </fieldset>
 
-          <p className={styles.errorMessage}>
-            Error: all fields are required - some missing.
-          </p>
+        { error && <p className={styles.errorMessage}>Error: all fields are required - some missing.</p> }    
 
         <button className={styles.submitButton} type="submit">
             Request Design Consultation
