@@ -16,9 +16,19 @@ const initialState= {
 //if none of the switch cases are 'met' then you just want to return the state
 //the 'state' in this case is interacting with the feild on the wesbite
 function reducer(state, action) {
-  switch(action.type){
+
+  switch(action.type) {
+    case "CHANGE_FIELD":
+      return {
+        data: {
+          ...state.data,
+          [action.payload.fieldName]: action.payload.fieldValue
+        },
+        error: state.error
+      };
+
     default: 
-    return state;
+      return state;
   }
 }
 
@@ -35,7 +45,7 @@ export default function ContactForm() {
         type: "CHANGE_FIELD",
         payload: {
           fieldName: event.target.name,
-          fieldvalue: event.target.value
+          fieldValue: event.target.value
         }
       })
     }
