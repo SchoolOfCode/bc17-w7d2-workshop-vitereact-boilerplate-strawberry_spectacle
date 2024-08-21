@@ -24,14 +24,21 @@ function reducer(state, action) {
 
 export default function ContactForm() {
 
-  
+  const [state, dispatch] = useReducer (reducer,initialState)
+  const [error, setError] = useState (false)
+
+
   function handleChange (event){
 
     if (event.target.name === "fullName") {
-      setFullName(event.target.value);
+      dispatch ({
+        type: "CHANGE_FIELD",
+        payload: {
+          fieldName: event.target.name,
+          fieldvalue: event.target.value
+        }
+      })
     }
-
-    
 
     console.log(event.target.value)
     console.log(event.target.name)
@@ -40,7 +47,7 @@ export default function ContactForm() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    if (!fullName)  {
+    if (!state.data.fullName)  {
       setError(true);
       return;
     }
@@ -66,7 +73,7 @@ export default function ContactForm() {
           
           <div className={styles.formGroup}>
             <div><label for="fullName">Full Name</label></div>
-            <div><input type="text" id="fullName" name="fullName" value={fullName} onChange={(event) => handleChange (event)} /> </div>
+            <div><input type="text" id="fullName" name="fullName" value={state.data.fullName} onChange={(event) => handleChange (event)} /> </div>
           </div>
 
         </fieldset>
