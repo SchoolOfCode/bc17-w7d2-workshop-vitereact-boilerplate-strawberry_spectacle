@@ -45,6 +45,17 @@ export default function ContactForm() {
 
   function handleSubmit(event) {
     event.preventDefault()
+
+    if (!fullName || !postcode || !street || !city || !phoneNumber || !email)  {
+      setError(true);
+      return;
+  }
+
+  if (error) {
+      setError(false);
+  }
+
+  console.log("Data!!!!!!");
   }
 
 // when someone submits form
