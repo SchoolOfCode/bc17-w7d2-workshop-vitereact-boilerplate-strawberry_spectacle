@@ -6,7 +6,12 @@ import styles from "./page.module.css";
 //this sets the initial state to empty, there will be no error as the intial response wouldn't need one 
 const initialState= {
   data:{
-    fullname:""
+    fullname:"",
+    postcode: "",
+    address: "",
+    city: "",
+    phone: "",
+    email: ""
   },
   error: false
 };
@@ -49,6 +54,7 @@ export default function ContactForm() {
         }
       })
     }
+
 
     if (event.target.name === "postcode") {
       dispatch ({
