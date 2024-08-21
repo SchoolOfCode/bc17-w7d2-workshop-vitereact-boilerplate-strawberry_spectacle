@@ -5,18 +5,27 @@
   font-size: 2rem; 
   width: 80%;
   display: inline-block;
+  align-items: center;
 }  
 
 .burgerButton {
-  display: flex-start;
-  position: sticky;
   padding: 0;
+  margin: auto;
   border: none;
   background: none;
-  width: 3rem;
+  width: 1rem;
   height: auto;
-} 
+  display: inline-block;
+  align-items: center;
+}
 
+.burgerButton:hover {
+  cursor: pointer;
+}
+
+.burgerButtonImg {
+  width: 3rem;
+}
 
 .contentMenu {
   text-decoration: none;
@@ -24,14 +33,37 @@
   align-items: center;
   justify-content: center;  
   display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
 }
 
 .menuOpen {
   background-color: orange;
   /* position: fixed; */
   width: 100vw;
-  height: 100vh;
-  
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkMenu p {
+  color: #000;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.linkMenu a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.linkMenu p:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .linkMenu{

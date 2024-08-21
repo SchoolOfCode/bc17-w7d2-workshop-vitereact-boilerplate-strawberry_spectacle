@@ -1,16 +1,35 @@
-.reviewHeading {
+.reviewSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Horizontally center the section */
+    padding: 2rem;
+    max-width: 1000px;
+}
+
+
+.buttonContainer {
+    display: flex;
     justify-content: center;
+    gap: 1rem; /* Adds spacing between buttons */
+    margin-bottom: 1.5rem; /* Space between buttons and the reviews */
+}
+
+.reviewHeading {
     color: rgb(58, 58, 58);
+    margin-bottom: 1rem;
 }
 
 .trustedText {
     color: rgb(45, 44, 44);
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .countryButton {
-    padding: 0.5rem;
-    margin: 0 2rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
     border: none;
     background: gray;
     color: white;
@@ -23,9 +42,16 @@
     color: white;
 }
 
+.countryButton:hover {
+    cursor: pointer;
+}
+
 .reviewContainer {
     background-color: rgb(225, 225, 225);
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
     border-radius: 0.5rem;
+    width: 100%;
+    max-width: 800px;
+    text-align: center; /* Centers the review text */
 }
