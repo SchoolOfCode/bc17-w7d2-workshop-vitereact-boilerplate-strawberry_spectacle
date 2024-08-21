@@ -1,14 +1,29 @@
 "use client"
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 import styles from "./page.module.css";
 
+//this sets the initial state to empty, there will be no error as the intial response wouldn't need one 
+const initialState= {
+  data:{
+    fullname:""
+  },
+  error: false
+};
+
+//switch case set up
+//reducer function set up
+//if none of the switch cases are 'met' then you just want to return the state
+//the 'state' in this case is interacting with the feild on the wesbite
+function reducer(state, action) {
+  switch(action.type){
+    default: 
+    return state;
+  }
+}
 
 export default function ContactForm() {
 
-  const [fullName,setFullName] = useState("")
-
-  const [ error, setError ] = useState(false);
   
   function handleChange (event){
 
