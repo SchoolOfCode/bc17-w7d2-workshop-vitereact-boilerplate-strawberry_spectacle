@@ -7,11 +7,6 @@ import styles from "./page.module.css";
 export default function ContactForm() {
 
   const [fullName,setFullName] = useState("")
-  const [postcode, setPostcode] = useState("")
-  const [address, setAddress] = useState("")
-  const [city, setCity] = useState("")
-  const [phone, setPhone] = useState("")
-  const [email, setEmail] = useState("")
 
   const [ error, setError ] = useState(false);
   
@@ -21,25 +16,7 @@ export default function ContactForm() {
       setFullName(event.target.value);
     }
 
-    if (event.target.name === "postcode") {
-      setPostcode(event.target.value);
-    }
-
-    if (event.target.name === "address") {
-      setAddress(event.target.value);
-    }  
-
-    if (event.target.name === "city") {
-      setCity(event.target.value);
-    }
-
-    if (event.target.name === "phone") {
-      setPhone(event.target.value);
-    }
-
-    if (event.target.name === "email") {
-      setEmail(event.target.value);
-    }
+    
 
     console.log(event.target.value)
     console.log(event.target.name)
@@ -48,7 +25,7 @@ export default function ContactForm() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    if (!fullName || !postcode || !address || !city || !phone || !email)  {
+    if (!fullName)  {
       setError(true);
       return;
     }
@@ -59,12 +36,6 @@ export default function ContactForm() {
 
     console.log("Data!!!!!!");
   }
-
-// when someone submits form
-// we want to handle submission
-  //stop form submitting
-    //
-
 
   return (
     <>
@@ -83,20 +54,6 @@ export default function ContactForm() {
             <div><input type="text" id="fullName" name="fullName" value={fullName} onChange={(event) => handleChange (event)} /> </div>
           </div>
 
-          <div className={styles.formGroup}>
-            <div><label for="postcode">Postcode</label></div>
-            <div><input type="text" id="postcode" name="postcode" value={postcode} onChange={(event) => handleChange (event)} /></div>
-          </div>
-
-          <div className={styles.formGroup}>
-            <div><label for="address">House/Flat Number and Street Name</label></div>
-            <div><input type="text" id="address" name="address" value={address} onChange={(event) => handleChange (event)} /></div>
-          </div>
-
-          <div className={styles.formGroup}>
-            <div><label for="city">City</label></div>
-            <div><input type="text" id="city" name="city" value={city} onChange={(event) => handleChange (event)} /></div>
-          </div>
         </fieldset>
 
           <div>
@@ -105,16 +62,7 @@ export default function ContactForm() {
 
         <fieldset className={styles.fieldsetContainer}>
 
-          <div className={styles.formGroup}>
-            <div><label for="phone">Phone Number</label></div>
-            <div><input type="tel" id="phone" name="phone" value={phone} onChange={(event) => handleChange (event)} /></div>
-          </div>
-
-          <div className={styles.formGroup}>
-            <div><label for="email">Email Address</label></div>
-            <div><input type="email" id="email" name="email" value={email} onChange={(event) => handleChange (event)}  /></div>
-          </div>
-
+        
         </fieldset>
 
         { error && <p className={styles.errorMessage}>Error: all fields are required - some missing.</p> }    
