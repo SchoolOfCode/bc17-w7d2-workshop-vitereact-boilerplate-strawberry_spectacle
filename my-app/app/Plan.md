@@ -3,6 +3,7 @@
 	-remove logic from onChange handler✅
 	-remove the html✅
 **Check this✅
+
 //remove fullName state
 -remove setFullName state
 -remove references to fullName state
