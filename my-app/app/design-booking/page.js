@@ -31,21 +31,32 @@ function reducer(state, action) {
         },
         error: state.error
       };
-
+    case "ERROR":
+      return {
+        ...state,
+        error: true
+      };
+    case "CLEAR_ERROR":
+        return {
+          ...state,
+          error: false
+        }
     default: 
       return state;
   }
 }
 
+// errors object
+  // each input field has a key in the errors object
+
 export default function ContactForm() {
 
   const [state, dispatch] = useReducer (reducer,initialState)
-  const [error, setError] = useState (false)
 
+  console.log(state)
 
   function handleChange (event){
 
-    if (event.target.name === "fullName") {
       dispatch ({
         type: "CHANGE_FIELD",
         payload: {
@@ -53,73 +64,26 @@ export default function ContactForm() {
           fieldValue: event.target.value
         }
       })
-    }
 
 
-    if (event.target.name === "postcode") {
-      dispatch ({
-        type: "CHANGE_FIELD",
-        payload: {
-          fieldName: event.target.name,
-          fieldValue: event.target.value
-        }
-      })
-    }
-
-    if (event.target.name === "address") {
-      dispatch ({
-        type: "CHANGE_FIELD",
-        payload: {
-          fieldName: event.target.name,
-          fieldValue: event.target.value
-        }
-      })
-    }
-
-    if (event.target.name === "city") {
-      dispatch ({
-        type: "CHANGE_FIELD",
-        payload: {
-          fieldName: event.target.name,
-          fieldValue: event.target.value
-        }
-      })
-    }
-
-    if (event.target.name === "phone") {
-      dispatch ({
-        type: "CHANGE_FIELD",
-        payload: {
-          fieldName: event.target.name,
-          fieldValue: event.target.value
-        }
-      })
-    }
-
-    if (event.target.name === "email") {
-      dispatch ({
-        type: "CHANGE_FIELD",
-        payload: {
-          fieldName: event.target.name,
-          fieldValue: event.target.value
-        }
-      })
-    }
-
-    console.log(event.target.value)
-    console.log(event.target.name)
+    // console.log(event.target.value)
+    // console.log(event.target.name)
   }
 
   function handleSubmit(event) {
     event.preventDefault()
 
     if (!state.data.fullName || !state.data.postcode || !state.data.address || !state.data.city || !state.data.phone || !state.data.email)  {
-      setError(true);
+      dispatch({
+        type: "ERROR"
+      });
       return;
     }
 
-    if (error) {
-        setError(false);
+    if (state.error) {
+        dispatch({
+          type: "CLEAR_ERROR"
+        });
     }
 
     console.log("Data!!!!!!");
@@ -177,7 +141,7 @@ export default function ContactForm() {
         
         </fieldset>
 
-        { error && <p className={styles.errorMessage}>Error: all fields are required - some missing.</p> }    
+        { state.error && <p className={styles.errorMessage}>Error: all fields are required - some missing.</p> }    
 
         <button className={styles.submitButton} type="submit">
             Request Design Consultation
