@@ -16,7 +16,7 @@ function handleClick() {
 
 return (
   <header className={styles.headerContainer}>
-    <h1 className={styles.titleContainer}> ╰(*°▽°*)╯Fireplace Palace🔥👩‍🚒</h1>
+    <h1 className={styles.titleContainer}>Fireplace Palace</h1>
     <button onClick={handleClick} className={styles.burgerButton}>
       <img className={styles.burgerButtonImg} src="menu-open-button.png" alt="Burger toggle menu" />
     </button>
